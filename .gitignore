@@ -1,0 +1,15 @@
+# API keys and environment
+.env
+
+# Python cache and virtual environments
+__pycache__/
+.venv/
+
+# Agent configuration
+.agents/
+
+# Personal resumes and sensitive data
+*.pdf
+*.docx
+resume_result.json
+matching_result.json
