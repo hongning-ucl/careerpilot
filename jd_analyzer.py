@@ -3,6 +3,7 @@ import os
 import json
 from dotenv import load_dotenv
 from openai import OpenAI
+import streamlit as st
 
 # =================================
 # 1. 初始化 DeepSeek API
@@ -11,7 +12,7 @@ from openai import OpenAI
 load_dotenv()
 
 client = OpenAI(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    api_key=os.getenv("DEEPSEEK_API_KEY") or st.secrets.get("DEEPSEEK_API_KEY"),
     base_url="https://api.deepseek.com"
 )
 

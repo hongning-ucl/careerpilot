@@ -2,11 +2,12 @@ import os
 import json
 from dotenv import load_dotenv
 from openai import OpenAI
+import streamlit as st
 
 load_dotenv()
 
 client = OpenAI(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    api_key=os.getenv("DEEPSEEK_API_KEY") or st.secrets.get("DEEPSEEK_API_KEY"),
     base_url="https://api.deepseek.com"
 )
 # job_matcher.py
