@@ -12,4 +12,4 @@ __pycache__/
 *.pdf
 *.docx
 resume_result.json
-matching_result.json
+matching_result.jsongit status --short

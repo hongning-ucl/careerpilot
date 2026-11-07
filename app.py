@@ -224,111 +224,111 @@ if st.session_state.analysis_result:
     # 简历解析结果
     # =============================
 
-    with st.expander("查看简历解析结果"):
+    # with st.expander("查看简历解析结果"):
 
-        resume_data = result["resume_data"]
+    #     resume_data = result["resume_data"]
 
-        candidate = resume_data.get(
-            "candidate",
-            {},
-        )
+    #     candidate = resume_data.get(
+    #         "candidate",
+    #         {},
+    #     )
 
-        st.subheader("候选人基本信息")
+    #     st.subheader("候选人基本信息")
 
-        st.json(candidate)
+    #     st.json(candidate)
 
-        st.subheader("教育经历")
+    #     st.subheader("教育经历")
 
-        education = resume_data.get(
-            "education",
-            [],
-        )
+    #     education = resume_data.get(
+    #         "education",
+    #         [],
+    #     )
 
-        if education:
-            st.json(education)
-        else:
-            st.info("未提取到教育经历。")
+    #     if education:
+    #         st.json(education)
+    #     else:
+    #         st.info("未提取到教育经历。")
 
-        st.subheader("工作与项目经历")
+    #     st.subheader("工作与项目经历")
 
-        experiences = resume_data.get(
-            "experiences",
-            [],
-        )
+    #     experiences = resume_data.get(
+    #         "experiences",
+    #         [],
+    #     )
 
-        if experiences:
-            st.json(experiences)
-        else:
-            st.info("未提取到工作或项目经历。")
+    #     if experiences:
+    #         st.json(experiences)
+    #     else:
+    #         st.info("未提取到工作或项目经历。")
 
-        st.subheader("专业技能")
+    #     st.subheader("专业技能")
 
-        st.json(
-            resume_data.get("skills", [])
-        )
+    #     st.json(
+    #         resume_data.get("skills", [])
+    #     )
 
-        st.subheader("待补充信息")
+    #     st.subheader("待补充信息")
 
-        st.json(
-            resume_data.get("evidence_gaps", [])
-        )
+    #     st.json(
+    #         resume_data.get("evidence_gaps", [])
+    #     )
 
-    # =============================
-    # JD 解析结果
-    # =============================
+    # # =============================
+    # # JD 解析结果
+    # # =============================
 
-    with st.expander("查看岗位 JD 解析结果"):
+    # with st.expander("查看岗位 JD 解析结果"):
 
-        jd_data = result["jd_data"]
+    #     jd_data = result["jd_data"]
 
-        job = jd_data.get(
-            "job",
-            {},
-        )
+    #     job = jd_data.get(
+    #         "job",
+    #         {},
+    #     )
 
-        st.subheader("岗位基本信息")
+    #     st.subheader("岗位基本信息")
 
-        st.json({
-            "job_title": job.get("job_title"),
-            "department": job.get("department"),
-            "seniority": job.get("seniority"),
-        })
+    #     st.json({
+    #         "job_title": job.get("job_title"),
+    #         "department": job.get("department"),
+    #         "seniority": job.get("seniority"),
+    #     })
 
-        st.subheader("岗位职责")
+    #     st.subheader("岗位职责")
 
-        st.json(
-            job.get("job_responsibilities", [])
-        )
+    #     st.json(
+    #         job.get("job_responsibilities", [])
+    #     )
 
-        st.subheader("岗位能力模型")
+    #     st.subheader("岗位能力模型")
 
-        capability_dimensions = job.get(
-            "capability_dimensions",
-            [],
-        )
+    #     capability_dimensions = job.get(
+    #         "capability_dimensions",
+    #         [],
+    #     )
 
-        if capability_dimensions:
-            st.json(capability_dimensions)
-        else:
-            st.info("未提取到岗位能力模型。")
+    #     if capability_dimensions:
+    #         st.json(capability_dimensions)
+    #     else:
+    #         st.info("未提取到岗位能力模型。")
 
-        st.subheader("优先条件")
+    #     st.subheader("优先条件")
 
-        st.json(
-            job.get("preferred_qualifications", [])
-        )
+    #     st.json(
+    #         job.get("preferred_qualifications", [])
+    #     )
 
-        st.subheader("技术技能")
+    #     st.subheader("技术技能")
 
-        st.json(
-            job.get("technical_skills", [])
-        )
+    #     st.json(
+    #         job.get("technical_skills", [])
+    #     )
 
-        st.subheader("行业知识")
+    #     st.subheader("行业知识")
 
-        st.json(
-            job.get("industry_knowledge", [])
-        )
+    #     st.json(
+    #         job.get("industry_knowledge", [])
+    #     )
 
     # =============================
     # 面试题与关键得分点
